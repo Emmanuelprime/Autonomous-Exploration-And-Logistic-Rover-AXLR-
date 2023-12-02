@@ -15,6 +15,14 @@
                 <origin xyz="0.0 0.0 0.0" rpy="${pi / 2.0} 0.0 0.0"/>
                 <material name="black"/>
             </visual>
+            <collision>
+                <geometry>
+                    <cylinder radius="${wheel_radius}" length="${wheel_length}"/>
+                </geometry>
+                <origin xyz="0.0 0.0 0.0" rpy="${pi / 2.0} 0.0 0.0"/>
+            </collision>
+            <xacro:cylinder mass="1.0" radius="${2*wheel_radius}" height="${2*wheel_length}"
+                xyz="0.0 0.0 0.0" rpy="${pi / 2.0} 0.0 0.0"/>
         </link>
     </xacro:macro>
     <link name="base_footprint">
@@ -28,6 +36,14 @@
             <origin xyz="0.0 0.0 ${base_height / 2}" rpy="0.0 0.0 0.0"/>
             <material name="white"/>
         </visual>
+        <collision>
+            <geometry>
+                <box size="${base_length} ${base_width} ${base_height}"/>
+            </geometry>
+            <origin xyz="0.0 0.0 ${base_height / 2}" rpy="0.0 0.0 0.0"/>
+        </collision>
+        <xacro:box mass="5.0" length="${2*base_length}" width="${2*base_width}" height="${2*base_height}" 
+            xyz="0.0 0.0 ${base_height / 2.0}" rpy="0.0 0.0 0.0"/>
     </link>
 
     <!-- Wheel Links -->
@@ -54,8 +70,16 @@
                 <sphere radius="${wheel_radius/2}"/>
             </geometry>
             <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
-            <material name="gray"/>
+            <material name="black"/>
         </visual>
+        <collision>
+            <geometry>
+                <sphere radius="${wheel_radius/2}"/>
+            </geometry>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        </collision>
+        <xacro:sphere mass="0.5" radius="${2*wheel_radius/2.0}"
+            xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
     </link>
 
     <joint name="base_caster_wheel_joint" type="fixed">

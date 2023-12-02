@@ -7,9 +7,9 @@ from ament_index_python.packages import get_package_share_path
 
 def generate_launch_description():
 
-    robot_urdf_path = os.path.join(get_package_share_path('my_robot_description'),
+    robot_urdf_path = os.path.join(get_package_share_path('axlr_description'),
                              'urdf', 'main.urdf.xacro')
-    rviz_config_path = os.path.join(get_package_share_path('my_robot_description'),
+    rviz_config_path = os.path.join(get_package_share_path('axlr_description'),
                                     'rviz', 'urdf_config.rviz')
     
     robot_description_param = ParameterValue(Command(['xacro ', robot_urdf_path]), value_type=str)
