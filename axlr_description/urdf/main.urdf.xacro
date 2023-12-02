@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <robot name="my_robot" xmlns:xacro="http://www.ros.org/wiki/xacro">
-    <xacro:include filename="misc_properties.urdf.xacro"/>
-    <xacro:include filename="mobile_base.urdf.xacro"/>
-    <xacro:include filename="mobile_base_gazebo.urdf.xacro"/>
+    <xacro:include filename="axlr_properties.urdf.xacro"/>
+    <xacro:include filename="axlr_base.urdf.xacro"/>
+    <xacro:include filename="axlr_camera.urdf.xacro"/>
+    <xacro:include filename="axlr_gazebo.urdf.xacro"/>
 </robot>
