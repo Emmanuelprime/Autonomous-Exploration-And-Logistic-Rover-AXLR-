@@ -2,6 +2,7 @@
 <robot name="my_robot" xmlns:xacro="http://www.ros.org/wiki/xacro">
     <xacro:include filename="axlr_properties.urdf.xacro"/>
     <xacro:include filename="axlr_base.urdf.xacro"/>
+    <xacro:include filename="axlr_lidar.urdf.xacro"/>
     <xacro:include filename="axlr_arm.urdf.xacro"/>
     <xacro:include filename="axlr_camera.urdf.xacro"/>
     <xacro:include filename="axlr_gazebo.urdf.xacro"/>
